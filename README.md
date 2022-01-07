@@ -25,7 +25,7 @@ $ python3 main.py
 Enter your Must username: iterlace
 
 Exported Want list to /tmp/must2letterboxd/want.csv
-Exported Watched list to /tmp/must2letterboxd/want.csv
+Exported Watched list to /tmp/must2letterboxd/watched.csv
 ```
 
 ### 2. Import .csv to Letterbox
@@ -35,5 +35,5 @@ Now you can upload:
 
 
 ## Notes
-The entire manual is available at https://letterboxd.com/about/importing-data/  
+An official import manual is available at https://letterboxd.com/about/importing-data/  
 Feel free to contribute to this repository.

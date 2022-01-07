@@ -20,7 +20,7 @@ def main():
     print(f"Exported Want list to {want_filepath}")
 
     CSVExporter.export_watched(watched_filepath, watched)
-    print(f"Exported Watched list to {want_filepath}")
+    print(f"Exported Watched list to {watched_filepath}")
 
 
 if __name__ == '__main__':
