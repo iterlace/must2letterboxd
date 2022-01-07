@@ -32,3 +32,8 @@ Exported Watched list to /tmp/must2letterboxd/want.csv
 Now you can upload:
  - **watched.csv** using a [direct link](https://letterboxd.com/import/)
  - **want.csv** to the [watchlist](https://letterboxd.com/iterlace/watchlist/)
+
+
+## Notes
+The entire manual is available at https://letterboxd.com/about/importing-data/  
+Feel free to contribute to this repository.
