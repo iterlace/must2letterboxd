@@ -26,11 +26,12 @@ class CSVExporter:
         movies = movies[::-1]
 
         with open(filepath, "w+", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, ["Title", "Year", "Rating10"])
+            writer = csv.DictWriter(f, ["Title", "Year", "Rating10", "WatchedDate"])
             writer.writeheader()
             for movie in movies:
                 writer.writerow({
                     "Title": movie.movie.name,
                     "Year": movie.movie.released.year if movie.movie.released else None,
-                    "Rating10": movie.added,
+                    "Rating10": movie.rate,
+                    "WatchedDate": movie.added.strftime("%Y-%m-%d")
                 })
