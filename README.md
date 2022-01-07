@@ -12,6 +12,9 @@ $ python3 install requests
 
 ## Usage
 Just provide a Must username. The rest is ours.
+
+<img src="docs/media/username.png" width="320" alt="Settings Screenshot"/>
+
 ```bash
 $ python3 main.py
 
