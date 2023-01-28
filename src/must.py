@@ -76,7 +76,8 @@ class MustAccount:
                         wm["modified_at"],
                         "%Y-%m-%dT%H:%M:%S.%fZ"
                     ).date(),
-                    rate=wm["rate"]
+                    rate=wm["rate"],
+                    review=wm["review"] #gather reviews from site
                 )
                 results.append(watched)
         return results
