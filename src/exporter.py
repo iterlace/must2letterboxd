@@ -34,7 +34,5 @@ class CSVExporter:
                     "Year": movie.movie.released.year if movie.movie.released else None,
                     "Rating10": movie.rate,
                     "WatchedDate": movie.added.strftime("%Y-%m-%d"),
-                    "Review": movie.review["body"] if type(movie.review) == dict else None, #If reviews exist, add them to the csv file
+                    "Review": movie.review,
                 })
-
-    

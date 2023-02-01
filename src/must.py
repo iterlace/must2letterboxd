@@ -70,6 +70,10 @@ class MustAccount:
                 if m.must_id != wm["product_id"]:
                     continue
 
+                review = None
+                if wm["review"]:
+                    review = wm["review"].get("body", "").strip().replace("\n", "")
+
                 watched = Watched(
                     movie=m,
                     added=dt.datetime.strptime(
@@ -77,7 +81,7 @@ class MustAccount:
                         "%Y-%m-%dT%H:%M:%S.%fZ"
                     ).date(),
                     rate=wm["rate"],
-                    review=wm["review"] #gather reviews from site
+                    review=review,
                 )
                 results.append(watched)
         return results

@@ -21,4 +21,4 @@ class Watched:
     movie: Movie
     added: dt.date
     rate: Optional[int]  # 1-10
-    review: Optional[dict] #review dictionary, as a dict, "body" is the review text
+    review: str
