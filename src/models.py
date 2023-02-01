@@ -21,3 +21,4 @@ class Watched:
     movie: Movie
     added: dt.date
     rate: Optional[int]  # 1-10
+    review: str
