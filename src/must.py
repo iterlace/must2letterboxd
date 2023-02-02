@@ -4,6 +4,7 @@ from typing import Dict, Any, List
 import requests
 
 from .models import Movie, Want, Watched
+from .helpers import generate_batches
 
 
 class MustAccount:
@@ -60,7 +61,9 @@ class MustAccount:
 
     def get_watched_movies(self) -> List[Watched]:
         watched_ids = self.user["lists"]["watched"]
-        movies = self.get_movies(watched_ids)
+        movies = []
+        for ids in generate_batches(watched_ids, 500):
+            movies.extend(self.get_movies(ids))
 
         watched_movies = self.get_user_products(watched_ids)
         results = []
@@ -88,7 +91,9 @@ class MustAccount:
 
     def get_want_movies(self) -> List[Want]:
         want_ids = self.user["lists"]["want"]
-        movies = self.get_movies(want_ids)
+        movies = []
+        for ids in generate_batches(want_ids, 500):
+            movies.extend(self.get_movies(ids))
 
         want_movies = self.get_user_products(want_ids)
         results = []
